@@ -6,8 +6,11 @@ using System.Web.Mvc;
 
 namespace SE310_WebsiteNgheNhac.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
+        [AllowAnonymous]
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
